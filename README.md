@@ -1,4 +1,4 @@
-# JWT Refresh Token Mimarisi Ödevi
+# JWT Refresh Token Mimarisi 
 
 Bu proje, JWT tabanlı kimlik doğrulama yapısını **Refresh Token Mimarisi** ile genişletmek amacıyla geliştirilmiştir.
 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWT Refresh Token Demo</title>
+    <link rel="stylesheet" th:href="@{/css/demo.css}" href="/css/demo.css">
+</head>
+<body>
+<main class="page">
+    <section class="hero">
+        <p class="eyebrow">n11 Bootcamp</p>
+        <h1>JWT Refresh Token Demo</h1>
+        <p class="lead">
+            Test login, access token validation, refresh flow, and logout behavior on a single screen.
+        </p>
+    </section>
+
+    <section class="grid">
+        <article class="panel">
+            <h2>1. Login</h2>
+            <label for="username">Username</label>
+            <input id="username" type="text" value="mert" autocomplete="username">
+
+            <label for="password">Password</label>
+            <input id="password" type="password" value="123" autocomplete="current-password">
+
+            <button id="loginButton" class="primary">Login</button>
+        </article>
+
+        <article class="panel">
+            <h2>2. Protected Requests</h2>
+            <div class="button-row">
+                <button id="messageButton">Fetch Message</button>
+                <button id="refreshButton">Refresh Token</button>
+                <button id="logoutButton" class="danger">Logout</button>
+            </div>
+            <p class="hint">
+                If the access token expires, trigger the protected request first, then refresh the token and try again.
+            </p>
+        </article>
+
+        <article class="panel full">
+            <h2>Token Status</h2>
+            <div class="token-meta">
+                <div>
+                    <span>Access Expires At</span>
+                    <strong id="accessExpire">-</strong>
+                </div>
+                <div>
+                    <span>Refresh Expires At</span>
+                    <strong id="refreshExpire">-</strong>
+                </div>
+            </div>
+
+            <label for="accessToken">Access Token</label>
+            <textarea id="accessToken" rows="5" readonly></textarea>
+
+            <label for="refreshToken">Refresh Token</label>
+            <textarea id="refreshToken" rows="5" readonly></textarea>
+        </article>
+
+        <article class="panel full">
+            <h2>Server Response</h2>
+            <div class="status-strip">
+                <span id="statusCode">Ready</span>
+                <span id="statusText">No request has been sent yet.</span>
+            </div>
+            <pre id="responseBox">Application is ready.</pre>
+        </article>
+    </section>
+</main>
+
+<script th:src="@{/js/demo.js}" src="/js/demo.js"></script>
+</body>
+</html>

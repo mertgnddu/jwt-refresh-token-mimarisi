@@ -24,7 +24,7 @@ public class UserDetailsService implements org.springframework.security.core.use
 
     @PostConstruct
     public void init() {
-        users.put("ibrahimgokyar", passwordEncoder.encode("123"));
+        users.put("mert", passwordEncoder.encode("123"));
     }
 
 
